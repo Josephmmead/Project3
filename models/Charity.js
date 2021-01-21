@@ -11,7 +11,7 @@ const charitySchema = new mongoose.Schema({
     type: String,
     default: ""
   },
-  // url for recipe web page - unique index
+  // url for CI page - unique index
   href: {
     type: String,
     default: "",
@@ -27,11 +27,29 @@ const charitySchema = new mongoose.Schema({
   zipCode: {
       type: Number,
   },
-  EIN: {
-      type: Number,
-      required: true
+  phone: {
+    type: String,
+    default: ""
   },
-  acceptedItems: [String]
+  EIN: {
+      type: String,
+      default:""
+  },
+  causes: [String],
+  mission: {
+    type: String,
+    default: ""
+  },
+  contactEmail: {
+    type: String,
+    default: ""
+  },
+  acceptedItems: [String],
+  donationMethod: {
+    type: String,
+    default: ""
+  }
+
 });
 
 const Charity = mongoose.model("Charity", charitySchema);
