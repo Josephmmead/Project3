@@ -230,6 +230,7 @@ const charitySeed = [
         ],
         donationMethod: "Call for drop-off times and instructions. Contact Lynette at lreddick @dvcac.org or 216-229-2420."
     },
+    
     {
         name: "",
         thumbnail: "",
