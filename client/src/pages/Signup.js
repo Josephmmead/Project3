@@ -1,8 +1,8 @@
 import React from 'react';
-import {Col, Row, Container} from "../components/Grid/Grid"
+import { Container } from "../components/Grid/Grid"
 
 
-  const Signup = () => {
+  function Signup() {
         return(
 
             <Container fluid>

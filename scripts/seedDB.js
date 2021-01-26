@@ -4,7 +4,7 @@ const db = require("../models");
 //need file to empty the Charity collection and insert charities below??
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/reactrecipes"
+    process.env.MONGODB_URI || "mongodb://localhost/Charity"
   );
 
 const charitySeed = [

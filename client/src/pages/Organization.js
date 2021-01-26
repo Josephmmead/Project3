@@ -1,10 +1,10 @@
 import React from 'react';
-import {Col, Row, Container} from "../components/Grid/Grid"
+import { Container} from "../components/Grid/Grid"
 
 
 
 
-  const Organization = () => {
+  function Organization()  {
         return(
 
             <Container fluid>

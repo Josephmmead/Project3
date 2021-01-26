@@ -9,3 +9,4 @@ export const SearchBar = ({placeholder, handleChange}) => (
     placeholder= {placeholder}
     onChange= {handleChange}/>
 )
+
