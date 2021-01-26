@@ -16,8 +16,13 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/home" component={Home} />
-            <Route exact path="/charity/:id" component={Organization} />
-            <Route exact path="/results" component={ResultsPage} />
+            <Route exact path="/api/charity/" component={Home} />
+            <Route exact path="/api/charity/:id" component={Organization} />
+            <Route exact path={["/api/charity/:acceptedItem", 
+                                "/api/charity/:causes",
+                                "/api/charity/:name",
+                                "/api/charity/:zipcode",
+                                "/api/charity/:city"]} component={ResultsPage} />
             <Route exact path="/signup" component={Signup} />
             <Route component={NoMatch} />
           </Switch>
