@@ -6,7 +6,7 @@ import './Footer.css'
 
 function Footer(){
     return(
-        <footer className="footer">
+        <footer className="footer ">
         <div className="container ">
             <span className="text-muted">
                 <div className="row">

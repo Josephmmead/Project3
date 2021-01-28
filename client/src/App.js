@@ -8,18 +8,19 @@ import Footer from "./components/Footer/Footer"
 import ResultsPage from "./pages/ResultsPage";
 import Signup from "./pages/Signup"
 
+
 function App() {
   return (
     <Router>
-      <div>
+      <div classname="wrapper">
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/home" component={Home} />
-            <Route exact path="/api/charity/" component={Home} />
             <Route exact path="/api/charity/:id" component={Organization} />
             <Route exact path={["/api/charity/:acceptedItem", 
                                 "/api/charity/:causes",
+                                "/api/charity/",
                                 "/api/charity/:name",
                                 "/api/charity/:zipcode",
                                 "/api/charity/:city"]} component={ResultsPage} />
