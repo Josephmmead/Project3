@@ -10,13 +10,15 @@ mongoose.connect(
 const charitySeed = [
     {
         name: "Edna House",
-        thumbnail: "",
+        thumbnail: "https://www.guidestar.org/ViewEdoc.aspx?eDocId=6169876&approved=True",
         href: "www.ednahouse.org",
         address: "2007 West 65th Street",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: 44102,
         phone: "216-281-7751",
         EIN: "14-1912872",
+        mainCause:"Sober living for women",
         causes: [
             "women",
             "recovery",
@@ -77,9 +79,11 @@ const charitySeed = [
         href: "https://cleveland.dressforsuccess.org/",
         address: "2239 East 55th Street",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44103",
         phone: "216-391-2301",
         EIN: "34-1872331",
+        mainCause:"Economic independence for women",
         causes: [
             "women",
             "poverty",
@@ -122,13 +126,15 @@ const charitySeed = [
     },
     {
         name: "Domestic Violence & Child Advocacy Center",
-        thumbnail: "http://test.dvcac.org/wp/",
+        thumbnail: "https://dvcac.org/wp-content/uploads/2017/10/2015-New-Logo-Large-Transparent-2-e1513881586605.png",
         href: "https://dvcac.org/",
         address: "P.O. Box 5466",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44101",
         phone: "216-229-2420",
         EIN: "34-1278377",
+        mainCause:"Domestic Violence, Child Abuse",
         causes: [
             "child abuse",
             "human services",
@@ -236,9 +242,11 @@ const charitySeed = [
         href: "http://hcfw.org/",
         address: "1227 Ansel Rd.",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44108",
         phone: "216-421-0662",
         EIN: "34-1264097",
+        mainCause:"Residential substance abuse for women and children",
         causes: [
             "women",
             "recovery",
@@ -333,13 +341,15 @@ const charitySeed = [
     },
     {
         name: "The City Mission",
-        thumbnail: "https://www.thecitymission.org/",
+        thumbnail: "https://www.thecitymission.org/wp-content/uploads/2018/04/logo.png",
         href: "https://www.thecitymission.org/",
         address: "5310 Carnegie Ave.",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44103",
         phone: "216-431-3510",
         EIN: "34-0760586",
+        mainCause:"Human services",
         causes: [
             "homeless",
             "homeless shelter",
@@ -498,9 +508,11 @@ const charitySeed = [
         href: "https://www.larchecleveland.org/",
         address: "11811 Shaker Blvd. Ste 116",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44120",
         phone: "216-721-2614",
         EIN: "34-1193618",
+        mainCause:"Group homes for the disabled",
         causes: [
             "shelter care",
             "residential care",
@@ -548,9 +560,12 @@ const charitySeed = [
         href: "https://www.talespinnerchildrenstheatre.org/",
         address: "5209 Detroit Avenue",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44102",
         phone: "216-264-9680",
         EIN: "45-3334641",
+        mainCause:"Arts and Culture for children",
+        
         causes: [
             "arts",
             "cuture",
@@ -595,9 +610,11 @@ const charitySeed = [
         href: "http://www.neighborhoodpetscle.org/",
         address: "3711 East 65th St.",
         city: "Cleveland",
+        state: "Ohio",
         zipCode: "44105",
         phone: "216-505-5853",
         EIN: "27-2026307",
+        mainCause:"Animal Welfare",
         causes: [
             "animals",
             "pets",
@@ -665,21 +682,7 @@ const charitySeed = [
             ],
         donationMethod: "Donations may be dropped off at our Slavic Village location (3711 E 65th St. Cleveland, OH) on Tuesdays & Thursdays between noon and 4:00 p.m., and Saturdays between 10:00 a.m. and 2:00 p.m. Contact us at info@neighborhoodpetscle.org or 216-505-5853 to schedule drop-off during other times."
     },
-    {
-        name: "",
-        thumbnail: "",
-        href: "",
-        address: "",
-        city: "",
-        zipCode: "",
-        phone: "",
-        EIN: "",
-        causes: [""],
-        mission: "",
-        contactEmail: "",
-        acceptedItems: [""],
-        donationMethod: ""
-    }
+    
 ]
 db.Charity.remove({})
   .then(() => db.Charity.collection.insertMany(charitySeed))
@@ -691,3 +694,21 @@ db.Charity.remove({})
     console.error(err);
     process.exit(1);
   });
+
+//   {
+//     name: "",
+//     thumbnail: "",
+//     href: "",
+//     address: "",
+//     city: "",
+//     state: "",
+//     zipCode: "",
+//     phone: "",
+//     EIN: "",
+//     mainCause:"",
+//     causes: [""],
+//     mission: "",
+//     contactEmail: "",
+//     acceptedItems: [""],
+//     donationMethod: ""
+// }
