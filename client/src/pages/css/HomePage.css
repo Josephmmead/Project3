@@ -1,4 +1,5 @@
 #section1{
+    display: flex;
     position: relative;
     background-color: rgb(240, 249, 255) !important; 
     margin-bottom: 0 !important;
@@ -32,14 +33,19 @@
  }
 
 #section2{
+    display:flex;
     background-color: #B4EBCA;
+    min-height: 75vh;
+    padding-top:9rem;
 
 }
 
 #section3{
+    display:flex;
     background-color: white;
     padding: 1rem;
     margin: 0em;
+    min-height: 75vh;
 }
 
 #headerTitle{
@@ -88,6 +94,18 @@
 #charityMission{
     padding-bottom: .25rem;
     
+}
+
+.charityLink {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+.charityLink:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
 }
 
 

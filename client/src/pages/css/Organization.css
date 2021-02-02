@@ -1,0 +1,7 @@
+.orgPage{
+    display:flex;
+    justify-content: center;
+    min-height: 100vh !important;
+    
+    
+}

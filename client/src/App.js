@@ -25,7 +25,7 @@ function App() {
                                 "/api/charity/:zipcode",
                                 "/api/charity/:city", */
                                 /* "/api/charity/:q"]} component={Home} /> */}
-            <Route exact path="/a" component={Organization} />
+            <Route exact path={["/api/charity/id/:id", "/api/charity/:id"]} component={Organization} />
             <Route exact path="/signup" component={Signup} />
             <Route component={NoMatch} />
           </Switch>
