@@ -1,0 +1,36 @@
+.jumbotron{
+    position: relative;
+    background-color: rgb(240, 249, 255) !important; 
+    margin-bottom: 0 !important;
+        
+}
+
+
+.headerText{
+   position: relative;
+   top:25%;
+   width: 100%;
+   text-align: start;
+   letter-spacing: 2px;
+   
+}
+
+#title{
+    color: rgb(56, 56, 56);  
+    font-size: 550%;
+    padding: 1rem 0px;
+
+    
+}
+
+.jumbotronImage{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#search{
+    margin-left:5px
+}
+
+

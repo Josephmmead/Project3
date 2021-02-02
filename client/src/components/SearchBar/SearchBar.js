@@ -1,14 +1,21 @@
 import React from 'react';
-import './SearchBar.css'
+import './SearchBar.css';
+import { Form, FormControl } from 'react-bootstrap';
 
 
-function SearchBar({placeholder, handleChange}) {
+
+
+function SearchBar(props) {
+
+  
+
     return(
-        <input
-        className= 'search'
-        type= 'search'
-        placeholder= {placeholder}
-        onChange= {handleChange}/>
+        <Form inline>
+          <FormControl className="mr-sm-2"
+           type="text" 
+           placeholder="Search"
+           {...props}/>          
+        </Form>
     )
     
 };

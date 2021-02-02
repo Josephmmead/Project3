@@ -1,0 +1,94 @@
+#section1{
+    position: relative;
+    background-color: rgb(240, 249, 255) !important; 
+    margin-bottom: 0 !important;
+    min-height: 75vh;   
+}
+
+.headerText{
+    position: relative;
+    top:25%;
+    width: 100%;
+    text-align: start;
+    letter-spacing: 2px;
+    
+ }
+ 
+ #title{
+     color: rgb(56, 56, 56);  
+     font-size: 550%;
+     padding: 1rem 0px;
+     
+ }
+ 
+ .jumbotronImage{
+     position: relative;
+     width: 100%;
+     height: auto;
+ }
+ 
+ #search{
+     margin-left:5px
+ }
+
+#section2{
+    background-color: #B4EBCA;
+
+}
+
+#section3{
+    background-color: white;
+    padding: 1rem;
+    margin: 0em;
+}
+
+#headerTitle{
+    font-weight: 600px;
+    font-size: 70px;
+    color: rgb(87, 87, 87);
+    
+}
+
+.aboutUs{
+    
+    padding: 1rem;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    position:relative;
+
+
+    
+    
+   
+}
+
+#section3{
+    background-color: white;
+}
+#section3-Title{
+    font-weight: 500px;
+    font-size: 65px;
+    text-align: center;
+    margin: 1em; 
+}
+
+#imageAlign{
+    margin: auto;
+    display: block;
+    
+}
+
+#charityName{
+
+    text-emphasis: Bold;
+    padding-bottom: .25rem;    
+}
+
+#charityMission{
+    padding-bottom: .25rem;
+    
+}
+
+
+

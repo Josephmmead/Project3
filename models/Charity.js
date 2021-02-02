@@ -25,7 +25,8 @@ const charitySchema = new mongoose.Schema({
       default: ""
   },
   zipCode: {
-      type: Number,
+      type: String,
+      
   },
   phone: {
     type: String,
@@ -55,3 +56,5 @@ const charitySchema = new mongoose.Schema({
 const Charity = mongoose.model("Charity", charitySchema);
 
 module.exports = Charity;
+
+

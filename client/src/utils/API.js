@@ -6,28 +6,32 @@ export default {
         return axios.get("/api/charity/")
     },
 
+    getCharitiesBySearch: function(query){
+        return axios.get("/api/charity/query/" + query)
+    },
+
     getCharityById: function(id) {
         return axios.get("/api/charity/" + id)
     },
 
     getCharityByName: function(name) {
-        return axios.get("/api/charity/" + name)
+        return axios.get("/api/charity/name", name)
     },
 
     getCharityBy: function(acceptedItems) {
-        return axios.get("/api/charity/" + acceptedItems)
+        return axios.get("/api/charity/acceptedItems", acceptedItems)
     },
 
     getCharityByCauses: function(causes) {
-        return axios.get("/api/charity/" + causes)
+        return axios.get("/api/charity/causes/" + causes)
     },
 
     getCharityByZipCode: function(zipCode) {
-        return axios.get("/api/charity/" + zipCode)
+        return axios.get("/api/charity/zipcode", zipCode)
     },
 
     getCharityByCity: function(city) {
-        return axios.get("/api/charity/" + city)
+        return axios.get("/api/charity/city", city)
     },
 
 // need to create routes for signup page, this is just an example. I'm sure this doesnt

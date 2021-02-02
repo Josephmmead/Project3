@@ -5,25 +5,27 @@ import Organization from "./pages/Organization";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer"
-import ResultsPage from "./pages/ResultsPage";
+// import ResultsPage from "./pages/ResultsPage";
 import Signup from "./pages/Signup"
 
 
 function App() {
+
+    
   return (
     <Router>
-      <div classname="wrapper">
+      <div className="wrapper">
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/api/charity/:id" component={Organization} />
-            <Route exact path={["/api/charity/:acceptedItem", 
+            {/* <Route exact path={["/api/charity/:acceptedItem", 
                                 "/api/charity/:causes",
                                 "/api/charity/",
                                 "/api/charity/:name",
                                 "/api/charity/:zipcode",
-                                "/api/charity/:city"]} component={ResultsPage} />
+                                "/api/charity/:city", */
+                                /* "/api/charity/:q"]} component={Home} /> */}
+            <Route exact path="/a" component={Organization} />
             <Route exact path="/signup" component={Signup} />
             <Route component={NoMatch} />
           </Switch>

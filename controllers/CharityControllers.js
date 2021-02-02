@@ -10,37 +10,43 @@ module.exports = {
     },
     findById: function(req, res) {
         db.Charity
-        .find(req.params.id)
+        .find(req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    findByAcceptedItem: function(req, res) {
+    // findByAcceptedItem: function(req, res) {
+    //     db.Charity
+    //     .find(req.params.acceptedItems)
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // },
+    // findByCauses: function(req, res) {
+    //     db.Charity
+    //     .find(req.params.causes)
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // },
+    // findByName: function(req, res){
+    //     db.Charity
+    //     .find(req.params.name)
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // },
+    // findByZipCode: function(req, res){
+    //     db.Charity
+    //     .find(req.params.zipCode)
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // },
+    // findByCity: function(req, res){
+    //     db.Charity
+    //     .find(req.params.city)
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err));
+    // },
+    findBySearch: function(req, res){
         db.Charity
-        .find(req.params.acceptedItems)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    },
-    findByCauses: function(req, res) {
-        db.Charity
-        .find(req.params.causes)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    },
-    findByName: function(req, res){
-        db.Charity
-        .find(req.params.name)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    },
-    findByZipCode: function(req, res){
-        db.Charity
-        .find(req.params.zipCode)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    },
-    findByCity: function(req, res){
-        db.Charity
-        .find(req.params.city)
+        .find({$text: {$search: req.params.query, $caseSensitive: false}})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
