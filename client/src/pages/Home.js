@@ -27,16 +27,15 @@ import './css/HomePage.css';
           .then(res => {
               setCharities(res.data)
             })  
-          .catch(err => console.log(err))       
-          
-          
+          .catch(err => console.log(err))   
+            
       };
 
     
         return(
             <>
                 <div id="section1">
-                <Container className="jumbotron">
+                <Container  className="jumbotron">
                     <Row>
                         <Col size="md-4 sm-12 align-self-center" >
                              <div className="headerText">
@@ -58,7 +57,7 @@ import './css/HomePage.css';
                          </Row>
                          </div>
                         </Col>
-                        <Col size="md-1" />
+                        <Col size="md-1 sm-0" />
                         <Col  size="md-7 sm-12 align-self-center">
                          <img className="jumbotronImage" src="https://blush.design/api/download?shareUri=DxHCwHij_&s=0.1%7E57331f-0.2%7Eeac7a8&f=7ec0ff%7E0%7E%7E0.37&w=800&h=800&fm=png" alt="Two women talking" />
                         </Col>
@@ -69,12 +68,17 @@ import './css/HomePage.css';
              <Row>
                 
                 <Col size="md-12 sm-12">
-                {Charities.length ? (
+                    
+                        {Charities.length ? (
+
+                    <Row>
+                        <Col size="md-1 sm-0"/>
+                        <Col size="md-10 sm-10">
                     
                         <List>
                             {Charities.map(data => (
                                 <ListItem key={data._id}>  
-                                <a href={"/api/charity/" + data._id}>
+                                <a className="charityLink" href={"/api/charity/" + data._id}>
                                     <Row>
                                         <Col size="md-2">
                                             <div id="imageAlign">
@@ -96,6 +100,9 @@ import './css/HomePage.css';
                                 </ListItem>
                             ))}
                         </List>
+                        </Col>
+                        <Col size="md-1 sm-0"/>
+                    </Row>  
                     ) : (
                        <div>
                         <div id="section2">
