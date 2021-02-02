@@ -1,13 +1,18 @@
 import React from 'react';
+import { Navbar, Button } from 'react-bootstrap';
+import './NavBar.css'
+
 
 function Nav() {
 
   return(
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/">
-        Charities-R-us
-      </a>
-    </nav>
+    // 
+    
+    <Navbar className="navbar   main-navigation justify-content-between ">
+      <Navbar.Brand className="logo" href="/">Giving</Navbar.Brand>
+      <Button className="login-btn" variant="outline-primary" size="sm">Log In</Button>
+    </Navbar>
+    
   );
 }
 

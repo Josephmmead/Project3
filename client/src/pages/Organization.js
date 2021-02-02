@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container} from "../components/Grid/Grid"
+import { Container, Row, Col} from "../components/Grid/Grid"
 
 
 
@@ -8,7 +8,16 @@ import { Container} from "../components/Grid/Grid"
         return(
 
             <Container fluid>
-                <h1> This is the indiviual Charity page</h1>
+                <Row>
+                    <Col size="md-5">
+                        <div className="orgImage">
+                            <img src="" alt=""></img>
+
+                        </div>
+                    </Col>
+
+                </Row>
+                
             </Container>
                          
         )

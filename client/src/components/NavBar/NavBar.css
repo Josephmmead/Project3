@@ -1,0 +1,18 @@
+.main-navigation{
+    background-color: rgb(240, 249, 255) !important;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2) !important;
+    min-height: 8vh;
+    align-items: center;
+}
+
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+.login-btn{
+    display:flex;
+    justify-content: flex-end;
+}

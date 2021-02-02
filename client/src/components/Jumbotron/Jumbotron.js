@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import SearchBar from '../SearchBar/SearchBar.js';
+import { Container, Jumbotron } from 'react-bootstrap'
+import {Row, Col} from '../Grid/Grid'
+import './Jumbotron.css'
+import SearchButton from '../SearchButton/Button.js';
+import API from '../../utils/API.js';
 
 
-function Jumbotron() {
+
+
+function Header() {
+
+    
+
     return(
-        <div
-      style={{ height: 560, clear: "both", paddingTop: 120, textAlign: "center" }}
-      className="jumbotron">
-       <h1>Charities-R-Us</h1> 
-       <h6>Search for a Charity</h6>
-       <SearchBar />
-    </div>
+        
+      <Jumbotron fluid>
+          
+      </Jumbotron>
+    
     )
 }
 
-export default Jumbotron;
+export default Header;

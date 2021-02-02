@@ -8,20 +8,23 @@ router.route("/")
 router.route("/:id")
     .get(CharityController.findById)
 
-router.route("/:acceptedItems")
-    .get(CharityController.findByAcceptedItem);
+// router.route("/acceptedItems")
+//     .get(CharityController.findByAcceptedItem);
 
-router.route("/:causes")
-    .get(CharityController.findByCauses);
+// router.route("/causes")
+//     .get(CharityController.findByCauses);
     
-router.route("/:name")
-    .get(CharityController.findByName);
+// router.route("/name")
+//     .get(CharityController.findByName);
 
-router.route("/:zipCode")
-    .get(CharityController.findByZipCode);
+// router.route("/zipCode")
+//     .get(CharityController.findByZipCode);
 
-router.route("/:city")
-    .get(CharityController.findByCity);
+// router.route("/city")
+//     .get(CharityController.findByCity);
+
+router.route("/query/:query")
+    .get(CharityController.findBySearch)
 
 router.route("/SignUp")
     .post(CharityController.create)

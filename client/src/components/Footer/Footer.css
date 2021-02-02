@@ -1,42 +1,15 @@
 .footer{
-    
+   
     bottom:0;
     width:100%;
     line-height:2em;
     margin-top: 5rem;
     padding:25px 0px 0px 0px;
-    text-align:justify;
+    
+    text-align:center;
+    align-items: center;
     background-color:rgb(51, 51, 51);
 }
-.fa {
-    margin: 0px 2px;
-    padding: 8px;
-    font-size: 25px;
-    width: 40px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
-
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-
-  .fa-github {
-      background:black;
-      color: white;
-  }
 
   #createdBy{
     font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
