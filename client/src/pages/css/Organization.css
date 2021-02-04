@@ -1,7 +1,22 @@
 .orgPage{
-    display:flex;
+    display: flex;
     justify-content: center;
-    min-height: 100vh !important;
-    
+    min-height: 100vh;  
+}
+​
+ul{
+    columns: 3 ;
+    -webkit-columns: 3 ;
+    -moz-columns: 3 ;
     
 }
+
+li{
+    padding-right: 2em ;
+};
+
+​
+.row {
+    padding-top: 10px !important;
+};
+

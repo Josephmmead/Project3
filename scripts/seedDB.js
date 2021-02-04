@@ -682,6 +682,24 @@ const charitySeed = [
             ],
         donationMethod: "Donations may be dropped off at our Slavic Village location (3711 E 65th St. Cleveland, OH) on Tuesdays & Thursdays between noon and 4:00 p.m., and Saturdays between 10:00 a.m. and 2:00 p.m. Contact us at info@neighborhoodpetscle.org or 216-505-5853 to schedule drop-off during other times."
     },
+
+    {
+//     name: "",
+//     thumbnail: "",
+//     href: "",
+//     address: "",
+//     city: "",
+//     state: "",
+//     zipCode: "",
+//     phone: "",
+//     EIN: "",
+//     mainCause:"",
+//     causes: [""],
+//     mission: "",
+//     contactEmail: "",
+//     acceptedItems: [""],
+//     donationMethod: ""
+// }
     
 ]
 db.Charity.remove({})
