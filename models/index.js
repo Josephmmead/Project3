@@ -1,5 +1,5 @@
 module.exports = {
-    Charity: require("./Charity")
-
+    Charity: require("./Charity"),
+    User: require("./User")
   };
   

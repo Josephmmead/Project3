@@ -6,7 +6,8 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer"
 // import ResultsPage from "./pages/ResultsPage";
-import Signup from "./pages/Signup"
+import SignUp from "./pages/SignUp"
+import SignIn from "./pages/SignIn"
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
                                 "/api/charity/:city", */
                                 /* "/api/charity/:q"]} component={Home} /> */}
             <Route exact path="/a" component={Organization} />
-            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/signUp" component={SignUp} />
+            <Route exact path="/SignIn" component={SignIn} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />

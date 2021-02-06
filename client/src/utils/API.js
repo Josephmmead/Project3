@@ -14,30 +14,15 @@ export default {
         return axios.get("/api/charity/" + id)
     },
 
-    getCharityByName: function(name) {
-        return axios.get("/api/charity/name", name)
-    },
-
-    getCharityBy: function(acceptedItems) {
-        return axios.get("/api/charity/acceptedItems", acceptedItems)
-    },
-
-    getCharityByCauses: function(causes) {
-        return axios.get("/api/charity/causes/" + causes)
-    },
-
-    getCharityByZipCode: function(zipCode) {
-        return axios.get("/api/charity/zipcode", zipCode)
-    },
-
-    getCharityByCity: function(city) {
-        return axios.get("/api/charity/city", city)
-    },
-
+    
 // need to create routes for signup page, this is just an example. I'm sure this doesnt
 // the way we need it to.
     createCharity: function(charityData) {
         return axios.post("/api/charity/", charityData)
     },
+
+    createUser: function(user){
+        return axios.post("/user/register/", user)
+    }
 
 }

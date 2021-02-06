@@ -2,12 +2,15 @@
   "name": "mern",
   "version": "0.1.0",
   "description": "Mern Demo",
-  "private": true,
   "proxy": "http://localhost:3001/",
+  "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "axios": "^0.18.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
@@ -28,4 +31,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
