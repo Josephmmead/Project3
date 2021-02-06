@@ -5,23 +5,8 @@ const CharityController = require("../../controllers/CharityControllers");
 router.route("/")
     .get(CharityController.findAll)
 
-router.route("/:id")
+router.route("/id/:id")
     .get(CharityController.findById)
-
-// router.route("/acceptedItems")
-//     .get(CharityController.findByAcceptedItem);
-
-// router.route("/causes")
-//     .get(CharityController.findByCauses);
-    
-// router.route("/name")
-//     .get(CharityController.findByName);
-
-// router.route("/zipCode")
-//     .get(CharityController.findByZipCode);
-
-// router.route("/city")
-//     .get(CharityController.findByCity);
 
 router.route("/query/:query")
     .get(CharityController.findBySearch)

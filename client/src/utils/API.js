@@ -11,10 +11,9 @@ export default {
     },
 
     getCharityById: function(id) {
-        return axios.get("/api/charity/" + id)
+        return axios.get("/api/charity/id/" + id)
     },
 
-    
 // need to create routes for signup page, this is just an example. I'm sure this doesnt
 // the way we need it to.
     createCharity: function(charityData) {

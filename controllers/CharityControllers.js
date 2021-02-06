@@ -10,7 +10,7 @@ module.exports = {
     },
     findById: function(req, res) {
         db.Charity
-        .find(req.body)
+        .find({ _id: req.params.id })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
@@ -41,5 +41,6 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }
+
 
 }

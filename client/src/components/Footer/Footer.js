@@ -12,11 +12,11 @@ function Footer(){
             <span className="text-muted">
                 <Row>          
                     <Col size="md-12" >
-                        <h5>GIVING</h5>
+                        <h5>G I V I N G</h5>
                         <div id="createdBy">
                             Copyright © 2020 GIVING All Rights Reserved
                         </div>
-                    </Col>        
+                    </Col>       
                 </Row>
             </span>
         </Container>

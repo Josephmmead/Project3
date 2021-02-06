@@ -1,5 +1,7 @@
 module.exports = {
     Charity: require("./Charity"),
-    User: require("./User")
+
+    User: require('./User')
+
   };
   
