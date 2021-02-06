@@ -14,6 +14,7 @@ require('./config/passport')(passport);
 
 //DB Config
 const db = require('./config/keys').mongoURI;
+const { Charity } = require("./models");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -31,6 +32,18 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  Charity.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+
 // Connect Flash
 app.use(flash());
 
@@ -42,22 +55,15 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Connect to MongoDB
-// mongoose.connect(db,{ useNewUrlParser: true ,useUnifiedTopology: true})
-//   .then(() => console.log('MongoDB Connected'))
-//   .catch(err => console.log(err));
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-
 // Add routes, both API and view
-app.use('/',routes);
+app.use('/', routes);
 app.use('/', require('./routes/index'))
-// app.use('/users', require('./'))
+
 
 // Connect to the Mongo DB
 mongoose.connect(
