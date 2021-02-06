@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom"
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,8 +13,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Axios from "axios";
+import API from '../utils/API';
 
 function Copyright() {
+  
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
@@ -58,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+  let history = useHistory();
   const classes = useStyles();
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -66,27 +70,14 @@ export default function SignIn() {
 
 
   const login = () => {
-    Axios({
-      method: "POST",
-      data: {
-        username: loginUsername, 
-        password: loginPassword,
-      }, 
-      withCredentials: true,
-      url: "http://localhost:4000/login",
-    }).then((res) => console.log(res));
-  };
+    console.log(loginUsername, loginPassword)
+    API.signIn({username: loginUsername, password: loginPassword}).then(results => {
+      console.log(results)
+      history.push("/profile/" + results.data)
+    })
+  }
   
-  // const getUser = () => {
-  //   Axios({
-  //     method: "GET",
-  //     withCredentials: true,
-  //     url: "http://localhost:4000/user",
-  //   }).then((res) => {
-  //     setData(res.data);
-  //     console.log(res.data);
-  //   });
-  // };
+
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -133,7 +124,7 @@ export default function SignIn() {
               label="Remember me"
             />
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               color="primary"

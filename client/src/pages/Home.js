@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Row, Container} from "../components/Grid/Grid"
 import SearchBar from "../components/SearchBar/SearchBar"
 import SearchButton from "../components/SearchButton/Button"
+
 import { List, ListItem } from "../components/List/List"
 import API from '../utils/API';
 import './css/HomePage.css';

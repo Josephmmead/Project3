@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom"
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -46,36 +47,34 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  signUp: {
+    minHeight: theme.spacing(90)
+  }
 }));
 
 export default function SignUp() {
   const classes = useStyles();
-  const [formObject, setFormObject] = useState({})
-  // const [registerUsername, setRegisterUsername] = useState("");
-  // const [registerPassword, setRegisterPassword] = useState("");
-  // const [data, setData] = useState(null);
+  const [username, setusername] = useState("")
+  const [password, setpassword] = useState("")
+ 
+  let history = useHistory();
 
   const register = (e) => {
     e.preventDefault();
-    // Axios({
-    //   method: "POST",
-    //   data: {
-    //     username: registerUsername,
-    //     password: registerPassword,
-    //   },
-    //   withCredentials: true,
-    //   url: "http://localhost:3000/register",
-    // }).then((res) => console.log(res));
-    console.log(formObject)
-    API.createUser(formObject)
-    .then(results =>{
-      console.log(results)
+    console.log(username);
+    console.log(password);
+    API.createUser({
+      username: username,
+      password: password
+    })
+    .then(results => {
+      history.push("/profile/" + results.data._id)
     })
     
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" className={classes.signUp}>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -97,7 +96,7 @@ export default function SignUp() {
                 name="email"
                 autoComplete="email"
                 placeholder="username"
-                onChange={(e) => setFormObject({ username: e.target.value, password: formObject.password})}
+                onChange={e => setusername(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -111,7 +110,7 @@ export default function SignUp() {
                 id="password"
                 autoComplete="current-password"
                 placeholder="password"
-                onChange={(e) => setFormObject( { username: formObject.username, password: e.target.value})}
+                onChange={e => setpassword(e.target.value)}
                 
               />
             </Grid>

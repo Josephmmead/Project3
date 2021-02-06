@@ -33,7 +33,7 @@ import { Card, Button } from 'react-bootstrap'
                                         <Card.Body>
                                             <Card.Text>
                                                 <p>Address:</p>
-                                                <p>{data.address}</p>
+                                            
                                                 <p>City and State:</p>
                                                 <p> {data.city}, {data.state}</p>
                                                 <p>Phone#:</p>

@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
 
     getCharities: function(){
-        return axios.get("/api/charity/")
+        return axios.get("/api/charity")
     },
 
     getCharitiesBySearch: function(query){
@@ -17,11 +17,14 @@ export default {
 // need to create routes for signup page, this is just an example. I'm sure this doesnt
 // the way we need it to.
     createCharity: function(charityData) {
-        return axios.post("/api/charity/", charityData)
+        return axios.post("/api/charity", charityData)
     },
 
     createUser: function(user){
-        return axios.post("/user/register/", user)
+        return axios.post("/api/charity/register", user)
+    },
+    signIn: function (user) {
+        return axios.post("/api/charity/signin", user)
     }
 
 }
