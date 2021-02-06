@@ -32,12 +32,18 @@ import { Card, Button } from 'react-bootstrap'
                                         <Card.Img variant="top" src={data.thumbnail} alt="" />
                                         <Card.Body>
                                             <Card.Text>
+                                                <p>Address:</p>
                                                 <p>{data.address}</p>
+                                                <p>City and State:</p>
                                                 <p> {data.city}, {data.state}</p>
+                                                <p>Phone#:</p>
                                                 <p> {data.phone}</p>
+                                                <p>Contact Email:</p>
                                                 <p> {data.contactEmail}</p>
-                                                <p> EIN#: {data.EIN}</p>
+                                                <p>EIN#:</p>
+                                                <p>{data.EIN}</p>
                                             </Card.Text>
+                                            {/* make imput field for website  */}
                                             <Button id="linkBtn" variant="dark" href={data.href}>Visit {data.name}</Button>
                                         </Card.Body>
                                     </Card>

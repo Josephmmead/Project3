@@ -2,21 +2,36 @@
     display: flex;
     justify-content: center;
     min-height: 100vh;  
+    padding-top: 3rem;
 }
-​
-ul{
-    columns: 3 ;
-    -webkit-columns: 3 ;
-    -moz-columns: 3 ;
-    
+
+
+
+ul {
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
 }
 
 li{
-    padding-right: 2em ;
-};
+    padding-right: 2em;
+}
 
-​
-.row {
-    padding-top: 10px !important;
-};
+#linkBtn{
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
+}
+#linkBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.05);
+}
 
+#charityName{
+  color: rgb(56, 56, 56);  
+     font-size: 350%;
+     padding: 1rem 0px;  
+}
+
+#charCard{
+  border:none;
+  margin-top:6vh;
+}
