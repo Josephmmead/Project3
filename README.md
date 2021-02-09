@@ -1,29 +1,29 @@
-# Create React Express App
+# GIVING 
 
-## About This Boilerplate
+<h1>Main header</h1>
+<img src="" alt="Overview Image">
+<p>Overview description</p>
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+<hl/>
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Searching for charities:
 
-## Starting the app locally
+<img src="" alt="Search Image">
+<p>The search bar on GIVING can find charities using multiple search criteria including:</p>
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+### Search Results Page
 
-```
-npm install
-```
+<img src="" alt="Search Result Image">
+<p>GIVING will render a result page populated with cards for each charity found in the search.</p>
 
-This should install node modules within the server and the client folder.
+### Individual Charity Page
 
-After both installations complete, run the following command in your terminal:
+<img src="" alt="Charity Page Image">
+<p>GIVING will render a results page populated with cards for each charity found in the search.</p>
 
-```
-npm start
-```
+<hl/>
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+## Creating an account:
 
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+<img src="" alt="Login Image">
+<p>Description</p>
