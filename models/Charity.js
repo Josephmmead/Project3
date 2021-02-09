@@ -2,9 +2,22 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const charitySchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+    // match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+  },
+
+  password: {
+    type: String,
+    required: true,
+    // match: ["^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$",
+    //         "Minimum eight characters, at least one uppercase letter, one lowercase letter and one number"]
+  },
   name: {
     type: String,
-    required: true
+    default: ""
   },
   // url string for thumbnail image
   thumbnail: {

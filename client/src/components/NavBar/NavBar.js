@@ -10,7 +10,7 @@ function Nav() {
     
     <Navbar className="navbar   main-navigation justify-content-between ">
       <Navbar.Brand className="logo" href="/">Giving</Navbar.Brand>
-      <Button className="login-btn" variant="outline-primary" size="sm">Log In</Button>
+      <Button className="login-btn" variant="outline-primary" href="SignIn" size="sm">Log In</Button>
     </Navbar>
     
   );
