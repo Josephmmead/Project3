@@ -60,6 +60,7 @@ import './css/HomePage.css';
                             </Col>
                             <Col size="md-2">
                                 <SearchButton 
+                                 value="Submit"
                                  id="searchBtn"
                                  onClick={ handleFormSubmit }
                                  />

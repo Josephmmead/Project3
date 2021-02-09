@@ -11,11 +11,13 @@ import { Card, Button } from 'react-bootstrap'
     const [Charity, setCharity] = useState([]);
     const { id } = useParams()
 
-    useEffect(() => {
+    const loadCharity = () =>{
         API.getCharityById(id)
-            .then(res => setCharity(res.data))
-            .catch(err => console.log(err))
-    }, []);
+        .then(res => setCharity(res.data))
+        .catch(err => console.log(err))
+    }
+
+    useEffect(loadCharity, []);
 
         return(
 
@@ -38,6 +40,7 @@ import { Card, Button } from 'react-bootstrap'
                                                 <p> {data.phone}</p>
                                                 <p> {data.contactEmail}</p>
                                                 <p> EIN#: {data.EIN}</p>
+                                              
                                             </Card.Text>
                                             <Button id="linkBtn" variant="dark" href={data.href}>Visit {data.name}</Button>
                                         </Card.Body>
@@ -46,17 +49,17 @@ import { Card, Button } from 'react-bootstrap'
                                 <Col size="md-1"></Col>
                                 <Col size="md-6">
                                     <h1 id="charityName">{data.name} </h1>
-                                    <hr></hr>
+                                        <hr></hr>
                                     <h3>{data.mainCause}</h3>                                                                     
-                                    <p id="charityMission"> {data.mission}</p>
+                                        <p id="charityMission"> {data.mission}</p>
                                     <h3>How to Donate</h3>
-                                    <p>{data.donationMethod}</p>
+                                        <p>{data.donationMethod}</p>
                                     <h3>Currently Accepting the Following:</h3>
-                                    <hr></hr>
+                                        <hr></hr>
                                     <Row >
                                         <ul>
                                             {data.acceptedItems.map(data => (
-                                            <li>{data}</li>
+                                            <li >{data}</li>
                                             ))}
                                         </ul>
                                     </Row>

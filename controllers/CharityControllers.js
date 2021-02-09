@@ -42,7 +42,7 @@ module.exports = {
     },
     remove: function(req, res){
         db.Charity
-        .findByIdAndRemove({ _id: req.params.id}, req.body)
+        .findByIdAndRemove({ _id: req.params.id})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

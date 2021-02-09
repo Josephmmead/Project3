@@ -61,8 +61,6 @@ export default function SignUp() {
 
   const register = (e) => {
     e.preventDefault();
-    console.log(username);
-    console.log(password);
     API.createUser({
       username: username,
       password: password

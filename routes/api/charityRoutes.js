@@ -20,8 +20,9 @@ router.route("/query/:query")
 
 router.route("/register")
     .post(CharityController.create)
+
+router.route("/profile/:id")
     .put(CharityController.update)
-    .delete(CharityController.remove)
 
 
 // signin and signup routes

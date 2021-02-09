@@ -3,41 +3,29 @@ import { Container, Row, Col} from "../components/Grid/Grid";
 import API from "../utils/API";
 import { useParams } from "react-router-dom";
 import './css/OrgProfile.css';
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
+
 
 
   function Organization()  {
 
     const [Charity, setCharity] = useState([]);
-    const [UpdatedCharity, setUpdatedCharity] = useState([{
-    name: "",
-    thumbnail: "",
-    href: "",
-    address: "",
-    city: "",
-    state: "",
-    zipCode: "",
-    phone: "",
-    EIN: "",
-    mainCause:"",
-    causes: [""],
-    mission: "",
-    contactEmail: "",
-    acceptedItems: [""],
-    donationMethod: ""
-    }])
+    const [UpdatedCharity, setUpdatedCharity] = useState([])
    
     
     
     const { id } = useParams()
 
-    useEffect(() => {
+    const loadCharity = () =>{
         API.getCharityById(id)
-            .then(res => setCharity(res.data))
-            .catch(err => console.log(err))
-            
-           
-    }, []);
+        .then(res => setCharity(res.data))
+        .catch(err => console.log(err))
+    }
+
+    useEffect(loadCharity, []) 
+        
+
+    
 
     const handleInputChange = event => {
         // Destructure the name and value properties off of event.target
@@ -47,9 +35,17 @@ import { Card } from 'react-bootstrap'
             ...UpdatedCharity,
             [event.target.name]: value
         });
-        console.log(UpdatedCharity)
-
+        
       };
+
+    const handleFormSubmit = event => {
+
+        event.preventDefault();
+
+        API.updateUser(id, UpdatedCharity)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }
     
 
         return(
@@ -65,9 +61,10 @@ import { Card } from 'react-bootstrap'
                                 <Col size="md-3">
                                     <Card id="charCard">
                                         <Card.Body>
-                                            <Card.Text>
+                                            <Card.Text> 
                                                 <h5>Logo URL:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.thumbnail}
                                                     name="thumbnail"
@@ -76,22 +73,25 @@ import { Card } from 'react-bootstrap'
                                                />
                                                 <h5>Street Address:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.address}
                                                     name="address"
                                                     type="text"
                                                     placeholder={data.address}
-                                               />
+                                               />                                             
                                                 <h5>City:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.city}
                                                     name="city"
                                                     type="text"
                                                     placeholder={data.city}
-                                               />
+                                               />                                             
                                                <h5>State:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.state}
                                                     name="state"
@@ -100,6 +100,7 @@ import { Card } from 'react-bootstrap'
                                                />
                                                 <h5>Phone#:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.phone}
                                                     name="phone"
@@ -108,6 +109,7 @@ import { Card } from 'react-bootstrap'
                                                />
                                                 <h5>Contact Email:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.contactEmail}
                                                     name="email"
@@ -116,6 +118,7 @@ import { Card } from 'react-bootstrap'
                                                />
                                                 <h5>EIN#:</h5>
                                                 <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.EIN}
                                                     name="EIN"
@@ -124,6 +127,7 @@ import { Card } from 'react-bootstrap'
                                                />
                                                <h5>Website:</h5>
                                                <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.href}
                                                     name="href"
@@ -138,6 +142,7 @@ import { Card } from 'react-bootstrap'
                                 <Col size="md-6">
                                     <h4>Charity Name:</h4>
                                                  <input
+                                                    className="searchBar"
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.name}
                                                     name="name"
@@ -150,7 +155,7 @@ import { Card } from 'react-bootstrap'
                                                  <textarea
                                                     type="text"
                                                     cols={75}
-                                                    rows={4}
+                                                    rows={2}
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.mainCause}
                                                     name="maincause"
@@ -162,7 +167,7 @@ import { Card } from 'react-bootstrap'
                                                  <textarea
                                                     type="text"
                                                     cols={75}
-                                                    rows={4}
+                                                    rows={3}
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.mission}
                                                     name="mission"                                                    
@@ -174,7 +179,7 @@ import { Card } from 'react-bootstrap'
                                                 <textarea
                                                     type="text"
                                                     cols={75}
-                                                    rows={4}
+                                                    rows={3}
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.donationMethod}
                                                     name="donationmethod"
@@ -199,6 +204,20 @@ import { Card } from 'react-bootstrap'
                             </Row>
                         </div>
                     ))}            
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size="md-12" >
+                        <div id="submit">
+                        <Button 
+                                 id="searchBtn"
+                                 type="button"
+                                 value="Submit"
+                                 onClick={ handleFormSubmit }
+                            >Submit
+                        </Button>
+                        
+                        </div>
                     </Col>
                 </Row>
             </Container>

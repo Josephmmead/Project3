@@ -2,17 +2,7 @@
     display: flex;
     justify-content: center;
     min-height: 100vh;  
-    padding-top: 3rem;
-}
-
-
-
-#linkBtn{
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
-}
-#linkBtn:hover{
-  transform: translateY(-2px);
-  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.05);
+    padding-top: 1rem;
 }
 
 h4{
@@ -28,5 +18,21 @@ h5{
   border:none;
   margin-top:0vh;
 }
+
+
+#searchBtn{
+    
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
+ }
+
+ #submit{
+     text-align: center;
+     padding: 1rem;
+     
+ }
+
+ .searchBar{
+     width: 20rem;
+ }
 
 
