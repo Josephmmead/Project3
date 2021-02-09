@@ -36,14 +36,15 @@ import './css/HomePage.css';
         return(
             <>
                 <div id="section1">
-                <Container  className="jumbotron">
+                <Container fluid className="jumbotron">
                     <Row>
+                        <Col size="md-1 "/>
                         <Col size="md-4 sm-12 align-self-center" >
                              <div className="headerText">
                              <h1 id="title">GIVING</h1> 
                              <h6 className="text-muted">Find a place to GIVE</h6>
                          <Row>
-                            <Col size="md-7" id="search">
+                            <Col size="md-auto" id="search">
                              <SearchBar   
                                  id="searchBar"                            
                                  onChange={handleInputChange}
@@ -58,7 +59,7 @@ import './css/HomePage.css';
                                  name="Search"
                              />
                             </Col>
-                            <Col size="md-2">
+                            <Col size="md-auto">
                                 <SearchButton 
                                  value="Submit"
                                  id="searchBtn"
@@ -68,7 +69,7 @@ import './css/HomePage.css';
                          </Row>
                          </div>
                         </Col>
-                        <Col size="md-1 "/> 
+                         
                         <Col  size="md-7 sm-12 align-self-center">
                          <img className="jumbotronImage" src="https://blush.design/api/download?shareUri=DxHCwHij_&s=0.1%7E57331f-0.2%7Eeac7a8&f=7ec0ff%7E0%7E%7E0.37&w=800&h=800&fm=png" alt="Two women talking" />
                         </Col>

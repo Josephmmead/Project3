@@ -99,6 +99,15 @@ import { Card, Button } from 'react-bootstrap'
                                                     type="text"
                                                     placeholder={data.state}
                                                />
+                                               <h5>Zip Code:</h5>
+                                                <input
+                                                    className="searchBar"
+                                                    onChange={handleInputChange}
+                                                    value={UpdatedCharity.zipCode}
+                                                    name="zipCode"
+                                                    type="text"
+                                                    placeholder={data.zipCode}
+                                               />
                                                 <h5>Phone#:</h5>
                                                 <input
                                                     className="searchBar"
@@ -125,7 +134,7 @@ import { Card, Button } from 'react-bootstrap'
                                                     name="EIN"
                                                     type="text"
                                                     placeholder={data.EIN}
-                                               />
+                                                    />
                                                <h5>Website:</h5>
                                                <p>Must be in https://www.____.___ format</p>
                                                <input
@@ -228,3 +237,5 @@ import { Card, Button } from 'react-bootstrap'
         )
     }
 export default Organization;
+
+
