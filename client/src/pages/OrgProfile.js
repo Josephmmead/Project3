@@ -44,6 +44,7 @@ import { Card, Button } from 'react-bootstrap'
 
         API.updateUser(id, UpdatedCharity)
         .then(res => console.log(res))
+        .then(alert("Your profile has been updated!"))
         .catch(err => console.log(err))
     }
     
@@ -62,7 +63,7 @@ import { Card, Button } from 'react-bootstrap'
                                     <Card id="charCard">
                                         <Card.Body>
                                             <Card.Text> 
-                                                <h5>Logo URL:</h5>
+                                                <h5>Profile Image URL:</h5>
                                                 <input
                                                     className="searchBar"
                                                     onChange={handleInputChange}
@@ -126,6 +127,7 @@ import { Card, Button } from 'react-bootstrap'
                                                     placeholder={data.EIN}
                                                />
                                                <h5>Website:</h5>
+                                               <p>Must be in https://www.____.___ format</p>
                                                <input
                                                     className="searchBar"
                                                     onChange={handleInputChange}
@@ -190,6 +192,7 @@ import { Card, Button } from 'react-bootstrap'
                                     <hr></hr>                                                                                                            
                                             <form >
                                                 <label>Please include commas between each item</label>
+                                                <br></br>
                                                     <textarea
                                                         type="text"
                                                         cols={75}
