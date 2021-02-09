@@ -1,0 +1,38 @@
+.orgPage{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;  
+    padding-top: 1rem;
+}
+
+h4{
+  color: rgb(56, 56, 56);  
+     font-size: 350%;
+     padding: 1rem 0px;  
+}
+h5{
+    padding: .5rem 0rem;
+}
+
+#charCard{
+  border:none;
+  margin-top:0vh;
+}
+
+
+#searchBtn{
+    
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
+ }
+
+ #submit{
+     text-align: center;
+     padding: 1rem;
+     
+ }
+
+ .searchBar{
+     width: 20rem;
+ }
+
+

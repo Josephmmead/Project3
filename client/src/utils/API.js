@@ -23,6 +23,11 @@ export default {
     createUser: function(user){
         return axios.post("/api/charity/register", user)
     },
+
+    updateUser: function(id,user){
+        return axios.put("/api/charity/profile/" + id, user)
+    },
+
     signIn: function (user) {
         return axios.post("/api/charity/signin", user)
     }

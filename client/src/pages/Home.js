@@ -60,6 +60,7 @@ import './css/HomePage.css';
                             </Col>
                             <Col size="md-2">
                                 <SearchButton 
+                                 value="Submit"
                                  id="searchBtn"
                                  onClick={ handleFormSubmit }
                                  />
@@ -129,17 +130,23 @@ import './css/HomePage.css';
                         
                                                 <h1 id="headerTitle">Why choose Giving?</h1>
                                                     <hr/>
-                                                    <p> Here at Giving we strive to bring charities and their local communities together. </p>
+                                                    <p className="aboutText"> Here at Giving, we strive to build connections between local nonprofits and our communities. Giving provides the platform for local charities to shine with customizable profiles, making it easy for users to connect. Building a better world starts in your own neighborhood. Use Giving to find organizations that need your help, and get involved today.   </p>
+
+                                                    <h4>For Donors:</h4>
+                                                    <p className="aboutText">Ready to let go of things you don’t need? Giving makes it easy to find local non-profits in need of your donations. Search by item to connect with organizations accepting your items. Search by zip code to find nearby non-profits that serve your community. Or search by cause to find organizations serving the causes and communities you support.</p>
+
+                                                    <h4>For Charitable Organizations:</h4>
+                                                    <p className="aboutText">Is your organization accepting material donations? Create a profile on Giving to link the needs of your organization to donors in your community.  Tell us your mission so that donors may give you their support. Effortlessly update your profile to provide donors with the most up-to-date information about the needs of your organization.</p>
                                         </Container>
                                     </Col>  
-                                    </Row>
+                                    </Row> 
                                 </Container>
                             </div>
                     <div id="section3">
                          <Container fluid>
                             <Row>
                                 <Col size="md-12">
-                                    <h4 id="section3-Title">Chairities and Communitees Join Forces</h4>
+                                    <h4 id="section3-Title">Where Chairities and Communites Join Forces</h4>
                         
                                 </Col>
                         
