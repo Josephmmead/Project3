@@ -32,8 +32,9 @@ import { Card, Button } from 'react-bootstrap'
                                         <Card.Img variant="top" src={data.thumbnail} alt="" />
                                         <Card.Body>
                                             <Card.Text>
-                                                <p>{data.address}</p>
-                                                <p> {data.city}, {data.state}</p>
+                                                
+                                                <div>{data.address}</div>
+                                                <div> {data.city}, {data.state}</div>
                                                 <p> {data.phone}</p>
                                                 <p> {data.contactEmail}</p>
                                                 <p> EIN#: {data.EIN}</p>

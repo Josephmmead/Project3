@@ -7,16 +7,6 @@
 
 
 
-ul {
-  columns: 4;
-  -webkit-columns: 4;
-  -moz-columns: 4;
-}
-
-li{
-    padding-right: 2em;
-}
-
 #linkBtn{
   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
 }
@@ -25,18 +15,18 @@ li{
   box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-#charityName{
+h4{
   color: rgb(56, 56, 56);  
      font-size: 350%;
      padding: 1rem 0px;  
 }
+h5{
+    padding: .5rem 0rem;
+}
 
 #charCard{
   border:none;
-  margin-top:6vh;
+  margin-top:0vh;
 }
 
-h4{
-  color: rgb(56, 56, 56);
-  
-}
+

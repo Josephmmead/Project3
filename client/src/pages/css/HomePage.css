@@ -48,9 +48,12 @@
     display:flex;
     background-color: #B4EBCA ;
     min-height: 80vh;
-    padding-top:9rem;
+    padding-top:4rem;
+    padding-bottom: 4rem;
+
 
 }
+
 
 #section3{
     display:flex;
@@ -62,13 +65,16 @@
 
 #headerTitle{
     font-weight: 600px;
-    font-size: 70px;
-    color: rgb(87, 87, 87);
-    
+    font-size: 75px;
+    color: rgb(87, 87, 87);  
+}
+.aboutText{
+    font-size: large;
+       
 }
 
 .aboutUs{
-    
+    margin-top:8%;
     padding: 1rem;
     border-radius: 25px;
     width: 100%;
