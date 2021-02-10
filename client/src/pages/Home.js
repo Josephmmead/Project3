@@ -36,7 +36,7 @@ import './css/HomePage.css';
         return(
             <>
                 <div id="section1">
-                <Container fluid className="jumbotron">
+                <Container  className="jumbotron">
                     <Row>
                         <Col size="md-1 "/>
                         <Col size="md-4 sm-12 align-self-center" >
@@ -118,7 +118,7 @@ import './css/HomePage.css';
                     ) : (
                        <div>
                         <div id="section2">
-                                 <Container fluid >
+                                 <Container  >
                  
                                     <Row >
                                         <Col size="md-6 sm-12">
@@ -144,7 +144,7 @@ import './css/HomePage.css';
                                 </Container>
                             </div>
                     <div id="section3">
-                         <Container fluid>
+                         <Container >
                             <Row>
                                 <Col size="md-12">
                                     <h4 id="section3-Title">Where Chairities and Communites Join Forces</h4>

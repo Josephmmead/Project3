@@ -37,6 +37,9 @@ const charitySchema = new Schema({
       type: String,
       default: ""
   },
+  state: {
+    type: String,
+  },
   zipCode: {
       type: String,
       
@@ -48,6 +51,10 @@ const charitySchema = new Schema({
   EIN: {
       type: String,
       default:""
+  },
+  mainCause:{
+     type: String,
+     default: ""
   },
   causes: [String],
   mission: {
