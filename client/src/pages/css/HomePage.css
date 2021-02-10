@@ -27,6 +27,7 @@
      position: relative;
      width: 100%;
      height: auto;
+     padding:2rem;
  }
  
  #search{
@@ -34,9 +35,11 @@
      
  }
 #searchBar{
+    
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
 }
  #searchBtn{
+    
     box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
  }
  #searchBtn:hover{

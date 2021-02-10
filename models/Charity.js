@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const charitySchema = new mongoose.Schema({
+const charitySchema = new Schema({
   username: {
     type: String,
     required: true,
@@ -37,6 +37,9 @@ const charitySchema = new mongoose.Schema({
       type: String,
       default: ""
   },
+  state: {
+    type: String,
+  },
   zipCode: {
       type: String,
       
@@ -48,6 +51,10 @@ const charitySchema = new mongoose.Schema({
   EIN: {
       type: String,
       default:""
+  },
+  mainCause:{
+     type: String,
+     default: ""
   },
   causes: [String],
   mission: {
