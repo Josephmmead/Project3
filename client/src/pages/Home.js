@@ -161,8 +161,7 @@ import './css/HomePage.css';
                          <Container >
                             <Row>
                                 <Col size="md-12">
-                                    <h4 id="section3-Title">Where Charities and Communities Join Forces</h4>
-                                    <h5 id="section3-find">Check out one of our handpicked charities:</h5>
+                                    <h4 id="section3-Title">Check out one of our handpicked charities:</h4>
                                 </Col>
                              </Row>
                              <Row>
