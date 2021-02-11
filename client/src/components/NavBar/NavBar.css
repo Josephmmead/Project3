@@ -14,10 +14,10 @@
 .login-btn{
     display:flex;
     justify-content: flex-end;
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .login-btn:hover{
     transform: translateY(-2px);
-    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.15);
 }
 

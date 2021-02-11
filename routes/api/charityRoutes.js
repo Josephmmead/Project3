@@ -10,7 +10,7 @@ const Charity = require("../../models")
 
 
 router.route("/")
-    .get(CharityController.findAll)
+    .get(CharityController.findRandom)
 
 router.route("/id/:id")
     .get(CharityController.findById)

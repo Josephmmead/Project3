@@ -1,7 +1,7 @@
 
 
 #section1{
-    display: flexbox;
+   
     position: relative;
     background-color: rgb(240, 249, 255) !important; 
     margin-bottom: 0 !important;
@@ -24,7 +24,7 @@
  }
  
  .jumbotronImage{
-     display:flexbox;
+     
      position: relative;
      width: 100%;
      height: auto;
@@ -37,15 +37,15 @@
  }
 #searchBar{
     
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, .1);
 }
  #searchBtn{
     
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
  }
  #searchBtn:hover{
     transform: translateY(-2px);
-    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.15);
  }
 
 #section2{
@@ -90,8 +90,12 @@
 
 #resultsList{
     padding:1rem 0rem !important;
+    
 }
 
+#section3-find{
+    text-align: center;
+}
 
 #section3-Title{
     font-weight: 500px;
@@ -118,7 +122,7 @@
 }
 
 .charityLink {
-    color: #003d72;
+    color: #001a31;
     text-decoration: none;
 }
 

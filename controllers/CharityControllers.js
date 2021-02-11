@@ -26,6 +26,13 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
 
+    findRandom: function(req, res){
+        db.Charity
+        .aggregate([{ $sample: { size: 1 } }])
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+
     // for creating a new charity, updating it, and removing it... Maybe...
     create: function(req, res){
         console.log(req.body)
