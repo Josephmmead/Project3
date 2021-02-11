@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row, Container} from "../components/Grid/Grid"
 import SearchBar from "../components/SearchBar/SearchBar"
 import SearchButton from "../components/SearchButton/Button"
@@ -12,12 +12,23 @@ import './css/HomePage.css';
 
     const [Charities, setCharities] = useState({})
     const [formObject, setFormObject] = useState("")
+    const [randomCharity, setRandomCharity] = useState([])
+
+    const loadRandomCharity = () =>{
+        API.getRandom()
+        .then(res => setRandomCharity(res.data))
+        .catch(err => console.log(err))
+
+    }
+
+    useEffect(loadRandomCharity, [])
 
     const handleInputChange = event => {
         // Destructure the name and value properties off of event.target
         // Update the appropriate state
         const { value } = event.target;
         setFormObject(value);
+        console.log(randomCharity)
         
       };
 
@@ -150,10 +161,38 @@ import './css/HomePage.css';
                          <Container >
                             <Row>
                                 <Col size="md-12">
-                                    <h4 id="section3-Title">Where Chairities and Communites Join Forces</h4>
-                        
+                                    <h4 id="section3-Title">Where Charities and Communities Join Forces</h4>
+                                    <h5 id="section3-find">Check out one of our handpicked charities:</h5>
                                 </Col>
-                        
+                             </Row>
+                             <Row>
+                                 <Col size="md-12"> 
+                                 {randomCharity.map(info => (
+                                 <List id ="random">
+                                <ListItem key={info._id}>  
+                                <a className="charityLink" href={"/api/charity/" + info._id}>
+                                    <Row>
+                                        <Col size="md-2">
+                                            <div id="imageAlign">
+                                                <img  className="img-fluid " src={info.thumbnail} alt=""></img> 
+                                            </div>
+                                        </Col>
+                                        <Col size="md-8">
+                                            <h3 id="charityName">{info.name} </h3>
+                                            <h5>{info.mainCause}</h5>                                                                     
+                                            <p id="charityMission"> {info.mission}</p>
+                                        </Col>
+                                        <Col size= "md-2">
+                                            <p> {info.address}</p>
+                                            <p> {info.city}, {info.state}</p>
+                                            <p> {info.phone}</p>
+                                        </Col>
+                                    </Row> 
+                                    </a>                                                          
+                                </ListItem>
+                                </List>
+                                 ))}
+                                 </Col>
                              </Row>
                          </Container>
                          
