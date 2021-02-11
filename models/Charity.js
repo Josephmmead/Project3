@@ -54,7 +54,6 @@ const charitySchema = new Schema({
   },
   mainCause:{
      type: String,
-     default: ""
   },
   causes: [String],
   mission: {
@@ -63,12 +62,10 @@ const charitySchema = new Schema({
   },
   contactEmail: {
     type: String,
-    default: ""
   },
   acceptedItems: [String],
   donationMethod: {
     type: String,
-    default: ""
   }
 
 });
