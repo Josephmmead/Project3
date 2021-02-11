@@ -168,7 +168,7 @@ import { Card, Button } from 'react-bootstrap'
                                                     rows={2}
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.mainCause}
-                                                    name="maincause"
+                                                    name="mainCause"
                                                     placeholder={data.mainCause}
                                                />
                                             </form>
@@ -192,7 +192,7 @@ import { Card, Button } from 'react-bootstrap'
                                                     rows={3}
                                                     onChange={handleInputChange}
                                                     value={UpdatedCharity.donationMethod}
-                                                    name="donationmethod"
+                                                    name="donationMethod"
                                                     placeholder={data.donationMethod}
                                                />
                                         </form>      
