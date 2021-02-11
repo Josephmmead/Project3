@@ -43,8 +43,7 @@ import { Card, Button } from 'react-bootstrap'
         event.preventDefault();
 
         API.updateUser(id, UpdatedCharity)
-        .then(res => console.log(res))
-        .then(alert("Your profile has been updated!"))
+        .then(res => alert("Your profile has been updated!"))
         .catch(err => console.log(err))
     }
     
