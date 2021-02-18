@@ -28,7 +28,7 @@ import './css/HomePage.css';
         // Update the appropriate state
         const { value } = event.target;
         setFormObject(value);
-        console.log(randomCharity)
+        
         
       };
 
@@ -37,9 +37,7 @@ import './css/HomePage.css';
         
         event.preventDefault();
         API.getCharitiesBySearch(formObject)
-          .then(res => {
-              setCharities(res.data)
-            })  
+          .then(res => {setCharities(res.data)})  
           .catch(err => console.log(err))
       };
 
@@ -83,7 +81,7 @@ import './css/HomePage.css';
                          <br/>
                          </div>
                         </Col>
-                         
+                        
                         <Col  size="md-7 sm-12 ">
                          <img className="jumbotronImage" src="https://blush.design/api/download?shareUri=DxHCwHij_&s=0.1%7E57331f-0.2%7Eeac7a8&f=7ec0ff%7E0%7E%7E0.37&w=800&h=800&fm=png" alt="Two women talking" />
                         </Col>
@@ -161,8 +159,7 @@ import './css/HomePage.css';
                          <Container >
                             <Row>
                                 <Col size="md-12">
-                                    <h4 id="section3-Title">Where Charities and Communities Join Forces</h4>
-                                    <h5 id="section3-find">Check out one of our handpicked charities:</h5>
+                                    <h4 id="section3-Title">Check out one of our handpicked charities:</h4>
                                 </Col>
                              </Row>
                              <Row>
