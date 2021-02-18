@@ -83,7 +83,7 @@ import './css/HomePage.css';
                          <br/>
                          </div>
                         </Col>
-                         
+                        
                         <Col  size="md-7 sm-12 ">
                          <img className="jumbotronImage" src="https://blush.design/api/download?shareUri=DxHCwHij_&s=0.1%7E57331f-0.2%7Eeac7a8&f=7ec0ff%7E0%7E%7E0.37&w=800&h=800&fm=png" alt="Two women talking" />
                         </Col>
