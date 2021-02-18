@@ -28,7 +28,7 @@ import './css/HomePage.css';
         // Update the appropriate state
         const { value } = event.target;
         setFormObject(value);
-        console.log(randomCharity)
+        
         
       };
 
@@ -37,9 +37,7 @@ import './css/HomePage.css';
         
         event.preventDefault();
         API.getCharitiesBySearch(formObject)
-          .then(res => {
-              setCharities(res.data)
-            })  
+          .then(res => {setCharities(res.data)})  
           .catch(err => console.log(err))
       };
 
